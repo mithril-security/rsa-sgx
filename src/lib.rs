@@ -155,7 +155,7 @@ compile_error!("This crate does not yet support environments without liballoc. S
 #[cfg(feature = "alloc")]
 #[macro_use]
 extern crate alloc;
-#[cfg(feature = "std")]
+#[cfg(any(feature = "std", feature = "sgx_std"))]
 extern crate std;
 
 #[cfg(feature = "alloc")]
